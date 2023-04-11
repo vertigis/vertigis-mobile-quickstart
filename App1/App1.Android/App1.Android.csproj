@@ -52,16 +52,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Esri.ArcGISRuntime">
-      <Version>100.15.0</Version>
+      <Version>100.15.1</Version>
     </PackageReference>
     <PackageReference Include="Esri.ArcGISRuntime.Xamarin.Android">
-      <Version>100.15.0</Version>
+      <Version>100.15.1</Version>
     </PackageReference>
     <PackageReference Include="Esri.ArcGISRuntime.Xamarin.Forms">
-      <Version>100.15.0</Version>
+      <Version>100.15.1</Version>
     </PackageReference>
     <PackageReference Include="VertiGIS.Mobile">
-      <Version>5.22.0.454</Version>
+      <Version>5.23.0.210</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>5.0.0.2337</Version>
