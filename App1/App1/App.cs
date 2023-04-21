@@ -12,9 +12,10 @@ namespace App1
         {
             AppManager.Initialize(this);
             
-            // Add the styles from this page to the application - overrides styles from VertiGIS.Mobile
+            // Uncomment the following to add the styles from this page to the application.
+            // Overrides default styles provided by VertiGIS.Mobile.
             //var res = new Styles().Resources;
-            //this.Resources.MergedDictionaries.Add(res);
+            //Resources.MergedDictionaries.Add(res);
 
             MainPage = new ContentPage()
             {
