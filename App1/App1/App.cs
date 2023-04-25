@@ -29,7 +29,7 @@ namespace App1
         protected override async void OnStart()
         {
             await AppManager.Instance.InitializeAsync();
-            var appPage = await AppManager.Instance.Bootstrapper.LoadAppAysnc(new Uri("resource://app.json"));
+            var appPage = await AppManager.Instance.Bootstrapper.LoadAppAsync(new Uri("resource://app.json"));
             await AppManager.Instance.Bootstrapper.DisplayAppAsync(appPage.Page);
         }
 
