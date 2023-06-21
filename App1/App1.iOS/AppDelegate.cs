@@ -31,7 +31,7 @@ namespace App1.iOS
 
             // Handle startup urls
             // See below comment in OpenUrl, then uncomment the code below
-            // SetLaunchUrl(viewerApp, options);
+            // SetLaunchUrl(options);
 
             LoadApplication(viewerApp);
             return base.FinishedLaunching(app, options);
@@ -41,7 +41,7 @@ namespace App1.iOS
         {
             // Handle startup urls
             // Add a URL type to Info.plist, then uncomment the code below
-            // return HandleOpenUrl(app, url, options, _viewerApp);
+            // return HandleOpenUrl(url);
             return false;
         }
 

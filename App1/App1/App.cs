@@ -6,13 +6,16 @@ using Xamarin.Forms;
 
 namespace App1
 {
-    public class App : VertiGIS.Mobile.App
+    public class App : Application
     {
         public App() : base()
         {
-            // Add the styles from this page to the application - overrides styles from VertiGIS.Mobile
-            var res = new Styles().Resources;
-            this.Resources.MergedDictionaries.Add(res);
+            AppManager.Initialize(this);
+            
+            // Uncomment the following to add the styles from this page to the application.
+            // Overrides default styles provided by VertiGIS.Mobile.
+            //var res = new Styles().Resources;
+            //Resources.MergedDictionaries.Add(res);
 
             MainPage = new ContentPage()
             {
@@ -20,14 +23,39 @@ namespace App1
             };
 
             // Register additional assemblies to search for configured assembly attributes.
-            AssemblyManager.RegisterAssemblies(this.GetType().Assembly);
+            AppManager.Instance.AssemblyManager.RegisterAssemblies(this.GetType().Assembly);
         }
 
         protected override async void OnStart()
         {
-            await InitializeAsync();
-            var appPage = await Bootstrapper.LoadAppAysnc(new Uri("resource://app.json"));
-            await Bootstrapper.DisplayAppAsync(appPage.Page);
+            await AppManager.Instance.InitializeAsync();
+            var appPage = await AppManager.Instance.Bootstrapper.LoadAppAsync(new Uri("resource://app.json"));
+            await AppManager.Instance.Bootstrapper.DisplayAppAsync(appPage.Page);
+        }
+
+        /*
+        OnSleep() and OnResume() don't seem to get called by Xamarin so we're providing the same functionality explicitly for iOS, Android.
+        */
+
+        // <inheritdoc/>
+        protected override void OnSleep()
+        {
+            AppManager.Instance.OnBackgrounded();
+
+            base.OnSleep();
+        }
+
+        // <inheritdoc/>
+        protected override void OnResume()
+        {
+            // OnResume will get called when background processing begins.
+            // UWP activated events are raised in UWP App.xaml.cs.
+            if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
+            {
+                AppManager.Instance.OnActivated();
+            }
+
+            base.OnResume();
         }
 
         private View GetContent()
@@ -64,11 +92,11 @@ namespace App1
                 }
                 else
                 {
-                    LoadingAction -= ShowStatus;
+                    AppManager.LoadingAction -= ShowStatus;
                 }
             }
 
-            LoadingAction += ShowStatus;
+            AppManager.LoadingAction += ShowStatus;
 
             return stack;
         }
