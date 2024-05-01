@@ -116,6 +116,7 @@
       <Link>Resources\app.json</Link>
     </BundleResource>
     <None Include="Entitlements.plist" />
+    <BundleResource Include="PrivacyInfo.xcprivacy" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\NLog.config" />
