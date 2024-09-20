@@ -2,7 +2,9 @@
 using VertiGIS.Mobile.Infrastructure.Configuration;
 using VertiGIS.Mobile.Toolkit.Views;
 using System;
-using Xamarin.Forms;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 namespace App1
 {
@@ -50,7 +52,8 @@ namespace App1
         {
             // OnResume will get called when background processing begins.
             // UWP activated events are raised in UWP App.xaml.cs.
-            if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
+            // TODO Xamarin.Forms.Device.RuntimePlatform is no longer supported. Use Microsoft.Maui.Devices.DeviceInfo.Platform instead. For more details see https://learn.microsoft.com/en-us/dotnet/maui/migration/forms-projects#device-changes
+                                    if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
             {
                 AppManager.Instance.OnActivated();
             }
@@ -80,7 +83,7 @@ namespace App1
             // Label
             var label = new Label()
             {
-                TextColor = Color.Black
+                TextColor = Colors.Black
             };
             stack.Children.Add(label);
 
