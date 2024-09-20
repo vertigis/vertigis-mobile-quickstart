@@ -1,149 +1,112 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>Exe</OutputType>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
-    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
-    <UseWinUI>true</UseWinUI>
-    <Platforms>x86;x64;arm64</Platforms>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-    <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
-    <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
-    <PublishProfile>win10-$(Platform).pubxml</PublishProfile>
-    <TargetFrameworks>net8.0-windows10.0.19041.0</TargetFrameworks>
-    <UseMaui>True</UseMaui>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
-    <OutputPath>bin\ARM\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
-    <OutputPath>bin\ARM\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
-    <CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
-    <CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
-    <CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <ItemGroup>
-    <AppxManifest Include="Package.appxmanifest">
-      <SubType>Designer</SubType>
-    </AppxManifest>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\App1\layout-large.xml">
-      <Link>Assets\layout-large.xml</Link>
-    </Content>
-    <Content Include="..\App1\app.json">
-      <Link>Assets\app.json</Link>
-    </Content>
-    <Content Include="..\App1\license.txt">
-      <Link>Assets\license.txt</Link>
-    </Content>
-    <Content Include="Assets\LargeTile.scale-100.png" />
-    <Content Include="Assets\LargeTile.scale-125.png" />
-    <Content Include="Assets\LargeTile.scale-150.png" />
-    <Content Include="Assets\LargeTile.scale-200.png" />
-    <Content Include="Assets\LargeTile.scale-400.png" />
-    <Content Include="Assets\SmallTile.scale-100.png" />
-    <Content Include="Assets\SmallTile.scale-125.png" />
-    <Content Include="Assets\SmallTile.scale-150.png" />
-    <Content Include="Assets\SmallTile.scale-200.png" />
-    <Content Include="Assets\SmallTile.scale-400.png" />
-    <Content Include="Assets\SplashScreen.scale-100.png" />
-    <Content Include="Assets\SplashScreen.scale-125.png" />
-    <Content Include="Assets\SplashScreen.scale-150.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-400.png" />
-    <Content Include="Assets\Square150x150Logo.scale-100.png" />
-    <Content Include="Assets\Square150x150Logo.scale-125.png" />
-    <Content Include="Assets\Square150x150Logo.scale-150.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-400.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-24.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
-    <Content Include="Assets\Square44x44Logo.scale-100.png" />
-    <Content Include="Assets\Square44x44Logo.scale-125.png" />
-    <Content Include="Assets\Square44x44Logo.scale-150.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-400.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
-    <Content Include="Assets\StoreLogo.scale-100.png" />
-    <Content Include="Assets\StoreLogo.scale-125.png" />
-    <Content Include="Assets\StoreLogo.scale-150.png" />
-    <Content Include="Assets\StoreLogo.scale-200.png" />
-    <Content Include="Assets\StoreLogo.scale-400.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="Icons\*.svg" />
-    <Content Include="..\_Libraries\UWP\**\*.svg" />
-    <Content Include="Properties\Default.rd.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Esri.ArcGISRuntime">
-      <Version>200.5.0</Version>
-    </PackageReference>
-    <PackageReference Include="Esri.ArcGISRuntime.Maui">
-      <Version>200.5.0</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
-    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240607001" />
-    <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.2.0" />
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.8" />
-    <PackageReference Include="VertiGIS.Mobile" Version="5.32.0-245734-NugetPackageUpdates.251" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\NLog.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\App1\App1.csproj" />
-  </ItemGroup>
-  <ProjectExtensions />
+	<PropertyGroup>
+		<!--<ApplicationManifest>app.manifest</ApplicationManifest>-->
+		<!-- https://github.com/dotnet/maui/issues/5372 -->
+		<EnableDefaultXamlItems>false</EnableDefaultXamlItems>
+		<!-- We do not want XAML files to be processed as .NET MAUI XAML -->
+		<EnableDefaultMauiItems>false</EnableDefaultMauiItems>
+		<ImplicitUsings>true</ImplicitUsings>
+		<UseMaui>True</UseMaui>
+		<Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+		<OutputType>WinExe</OutputType>
+		<DefaultLanguage>en-US</DefaultLanguage>
+		<TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+		<EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+		<UseWinUI>true</UseWinUI>
+		<Platforms>x86;x64;arm64</Platforms>
+		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+		<PublishProfile>win10-$(Platform).pubxml</PublishProfile>
+		<TargetFrameworks>net8.0-windows10.0.19041.0</TargetFrameworks>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+		<OutputPath>bin\ARM\Debug\</OutputPath>
+		<DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+		<NoWarn>;2008</NoWarn>
+		<UseVSHostingProcess>false</UseVSHostingProcess>
+		<CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+		<OutputPath>bin\ARM\Release\</OutputPath>
+		<DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+		<NoWarn>;2008</NoWarn>
+		<UseVSHostingProcess>false</UseVSHostingProcess>
+		<UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+		<CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+		<OutputPath>bin\x64\Debug\</OutputPath>
+		<DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+		<NoWarn>;2008</NoWarn>
+		<UseVSHostingProcess>false</UseVSHostingProcess>
+		<CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+		<OutputPath>bin\x64\Release\</OutputPath>
+		<DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+		<NoWarn>;2008</NoWarn>
+		<UseVSHostingProcess>false</UseVSHostingProcess>
+		<UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+		<CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+		<OutputPath>bin\x86\Debug\</OutputPath>
+		<DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+		<NoWarn>;2008</NoWarn>
+		<UseVSHostingProcess>false</UseVSHostingProcess>
+		<CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+		<OutputPath>bin\x86\Release\</OutputPath>
+		<DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+		<NoWarn>;2008</NoWarn>
+		<UseVSHostingProcess>false</UseVSHostingProcess>
+		<UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+		<CodeAnalysisRuleSet>App1.UWP.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<ItemGroup>
+		<AppxManifest Include="Package.appxmanifest">
+			<SubType>Designer</SubType>
+		</AppxManifest>
+	</ItemGroup>
+	<ItemGroup>
+		<MauiAsset Include="Assets\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		<None Remove="Assets\**" />
+
+		<MauiAsset Include="..\App1\layout-large.xml">
+			<Link>Assets\layout-large.xml</Link>
+		</MauiAsset>
+		<MauiAsset Include="..\App1\app.json">
+			<Link>Assets\app.json</Link>
+		</MauiAsset>
+		<MauiAsset Include="..\App1\license.txt">
+			<Link>Assets\license.txt</Link>
+		</MauiAsset>
+		
+		<Content Include="Icons\*.svg" />
+		<Content Include="..\_Libraries\UWP\**\*.svg" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Esri.ArcGISRuntime">
+			<Version>200.5.0</Version>
+		</PackageReference>
+		<PackageReference Include="Esri.ArcGISRuntime.Maui">
+			<Version>200.5.0</Version>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240607001" />
+		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.2.0" />
+		<PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.8" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.32.0-PullRequest20253.243" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="Assets\NLog.config">
+			<SubType>Designer</SubType>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\App1\App1.csproj" />
+	</ItemGroup>
+	<ProjectExtensions />
 </Project>

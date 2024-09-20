@@ -63,7 +63,7 @@ namespace App1
         private View GetContent()
         {
             // Stack
-            var stack = new StackLayout
+            var stack = new VerticalStackLayout
             {
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
@@ -71,7 +71,7 @@ namespace App1
             };
 
             // Spinner
-            var spinner = new EnhancedActivityIndicator()
+            var spinner = new ActivityIndicator()
             {
                 IsRunning = true
             };

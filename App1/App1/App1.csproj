@@ -17,7 +17,8 @@
     <PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
-    <PackageReference Include="VertiGIS.Mobile" Version="5.32.0-245734-NugetPackageUpdates.251" />
+	  <!-- ExcludeAssets="buildTransitive" prevents https://github.com/dotnet/maui/issues/19840 -->
+    <PackageReference Include="VertiGIS.Mobile" Version="5.32.0-PullRequest20253.243" ExcludeAssets="buildTransitive"/>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="AppResources.Designer.cs">
