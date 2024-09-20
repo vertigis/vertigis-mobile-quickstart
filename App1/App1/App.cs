@@ -52,8 +52,7 @@ namespace App1
         {
             // OnResume will get called when background processing begins.
             // UWP activated events are raised in UWP App.xaml.cs.
-            // TODO Xamarin.Forms.Device.RuntimePlatform is no longer supported. Use Microsoft.Maui.Devices.DeviceInfo.Platform instead. For more details see https://learn.microsoft.com/en-us/dotnet/maui/migration/forms-projects#device-changes
-                                    if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
+            if (DeviceInfo.Platform != DevicePlatform.WinUI)
             {
                 AppManager.Instance.OnActivated();
             }
