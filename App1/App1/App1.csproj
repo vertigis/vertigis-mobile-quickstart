@@ -15,9 +15,9 @@
   <ItemGroup>
     <PackageReference Include="Esri.ArcGISRuntime" Version="200.5.0" />
     <PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
-    <PackageReference Include="VertiGIS.Mobile" Version="5.29.0.318" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+    <PackageReference Include="VertiGIS.Mobile" Version="5.32.0-245734-NugetPackageUpdates.251" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="AppResources.Designer.cs">
