@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Hosting;
+using VertiGIS.Mobile.Platform;
 
 namespace App1.UWP;
 
@@ -10,7 +11,8 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
 
         builder
-            .UseSharedMauiApp();
+            .UseSharedMauiApp()
+            .UseStudioMobile();
 
         return builder.Build();
     }
