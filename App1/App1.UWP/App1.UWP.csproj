@@ -74,13 +74,13 @@
 		<None Remove="Assets\**" />
 
 		<MauiAsset Include="..\App1\layout-large.xml">
-			<Link>Assets\layout-large.xml</Link>
+			<Link>layout-large.xml</Link>
 		</MauiAsset>
 		<MauiAsset Include="..\App1\app.json">
-			<Link>Assets\app.json</Link>
+			<Link>app.json</Link>
 		</MauiAsset>
 		<MauiAsset Include="..\App1\license.txt">
-			<Link>Assets\license.txt</Link>
+			<Link>license.txt</Link>
 		</MauiAsset>
 		
 		<Content Include="Icons\*.svg" />
