@@ -9,9 +9,12 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-                <!-- Other merged dictionaries here -->
+                <ResourceDictionary Source="VertiGIS.Mobile/Platforms/Windows/VertiGISResources.xaml" />
+                <!-- TODO: missing from nupkg? <ResourceDictionary Source="VertiGIS.Mobile.Toolkit/Resources/ToolkitResources.xaml" />-->
             </ResourceDictionary.MergedDictionaries>
-            <!-- Other app resources here -->
+            <Style x:Key="DefaultButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Blue"/>
+            </Style>
         </ResourceDictionary>
     </maui:MauiWinUIApplication.Resources>
 </maui:MauiWinUIApplication>
