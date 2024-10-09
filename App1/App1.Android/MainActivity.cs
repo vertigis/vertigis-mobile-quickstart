@@ -1,53 +1,14 @@
-﻿using Android.App;
-using Android.Content;
+using Android.App;
 using Android.Content.PM;
-using Android.OS;
-using VertiGIS.Mobile;
-using VertiGIS.Mobile.Platform;
-using Java.Lang;
-using Xamarin.Forms;
-using static Java.Lang.Thread;
+using Microsoft.Maui;
 
-namespace App1.Droid
+namespace App1.Droid;
+
+// TODO: The original platform specific bootstrapping code has been archived as MainActivity.cs.original. ActivityAttributes should be migrated from the archived file to this one and any additional changes need to be manually migrated to MauiProgram.cs
+// See Android App Lifecycle: https://learn.microsoft.com/dotnet/maui/fundamentals/app-lifecycle#android
+// See MainActivity: https://learn.microsoft.com/dotnet/maui/android/manifest#activity-name
+
+[Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
+public class MainActivity : MauiAppCompatActivity
 {
-    [Activity(Name = "app1.mainactivity", Label = "App1", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : VertiGISMobileActivity, IUncaughtExceptionHandler
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            DefaultUncaughtExceptionHandler = this;
-            HandleExceptions();
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
-            Forms.Init(this, bundle);
-            AndroidInitializer.Init(this, bundle);
-
-            // The app was launched with the splash screen theme, so change it to the main theme now
-            base.SetTheme(Resource.Style.MainTheme);
-
-            base.OnCreate(bundle);
-
-            var app = new App();
-
-            // Handle startup urls
-            HandleOnCreateIntent(); // Startup urls
-            HandleFullyDrawn(); // Android diagnostics
-            HandleAppPermissions(); // Location, bluetooth, etc.
-
-            LoadApplication(app);
-        }
-
-        protected override void OnNewIntent(Intent intent)
-        {
-            // Handle VertiGIS Studio Mobile startup parameters
-            // Need to add an intent-filter in AndroidManifest.xml, then uncomment code below
-            // HandleNewIntent(intent);
-        }
-
-        public void UncaughtException(Thread t, Throwable e)
-        {
-            //DisplayError(e.Message);
-        }
-    }
 }
