@@ -18,6 +18,20 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
   </PropertyGroup>
+	<ItemGroup>
+		<MauiAsset Include="..\App1\layout-large.xml">
+			<Link>layout-large.xml</Link>
+		</MauiAsset>
+		<MauiAsset Include="..\App1\layout-small.xml">
+			<Link>layout-small.xml</Link>
+		</MauiAsset>
+		<MauiAsset Include="..\App1\app.json">
+			<Link>app.json</Link>
+		</MauiAsset>
+		<MauiAsset Include="..\App1\license.txt">
+			<Link>license.txt</Link>
+		</MauiAsset>		
+	</ItemGroup>
   <ItemGroup>
     <PackageReference Include="Esri.ArcGISRuntime">
       <Version>200.5.0</Version>
