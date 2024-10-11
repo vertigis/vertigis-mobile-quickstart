@@ -18,7 +18,7 @@
     <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
 	  <!-- ExcludeAssets="buildTransitive" prevents https://github.com/dotnet/maui/issues/19840 -->
-    <PackageReference Include="VertiGIS.Mobile" Version="5.33.0-PullRequest20253.36" ExcludeAssets="buildTransitive;build"/>
+    <PackageReference Include="VertiGIS.Mobile" Version="5.33.0-303061-NugetAndroid.48" ExcludeAssets="buildTransitive;build"/>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="AppResources.Designer.cs">
