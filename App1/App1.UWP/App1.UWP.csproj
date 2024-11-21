@@ -98,7 +98,7 @@
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240607001" />
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.2.0" />
 		<PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.8" />
-	  <PackageReference Include="VertiGIS.Mobile" Version="5.33.0-main.81" />
+	  <PackageReference Include="VertiGIS.Mobile" Version="5.33.0-245734-Nuget-iOS.293" />
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="Assets\NLog.config">
