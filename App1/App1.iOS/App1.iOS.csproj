@@ -69,6 +69,9 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
   </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+    <ProvisioningType>manual</ProvisioningType>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Esri.ArcGISRuntime">
       <Version>200.5.0</Version>
