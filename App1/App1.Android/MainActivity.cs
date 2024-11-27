@@ -1,12 +1,3 @@
-using Android.App;
-using Android.Content.PM;
-using Android.OS;
-using Java.Lang;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls.Compatibility;
-using VertiGIS.Mobile.Platforms;
-using static Java.Lang.Thread;
-
 namespace App1.Droid;
 
 // See Android App Lifecycle: https://learn.microsoft.com/dotnet/maui/fundamentals/app-lifecycle#android

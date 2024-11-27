@@ -1,10 +1,5 @@
 ﻿using VertiGIS.Mobile;
 using VertiGIS.Mobile.Infrastructure.Configuration;
-using VertiGIS.Mobile.Toolkit.Views;
-using System;
-using Microsoft.Maui.Graphics;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 namespace App1
 {
@@ -13,7 +8,7 @@ namespace App1
         public App() : base()
         {
             AppManager.Initialize(this);
-            
+
             // Uncomment the following to add the styles from this page to the application.
             // Overrides default styles provided by VertiGIS.Mobile.
             //var res = new Styles().Resources;

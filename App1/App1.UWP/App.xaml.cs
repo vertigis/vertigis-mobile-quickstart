@@ -1,7 +1,3 @@
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using VertiGIS.Mobile.Platforms.Platform;
-
 namespace App1.UWP;
 
 // See Windows App Lifecycle: https://learn.microsoft.com/dotnet/maui/fundamentals/app-lifecycle#windows

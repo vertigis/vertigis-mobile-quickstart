@@ -1,6 +1,4 @@
 using Foundation;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Maui.Controls.Compatibility.Hosting;
 using Microsoft.Maui.Hosting;
 using System.Collections.Generic;
 using System.IO;
