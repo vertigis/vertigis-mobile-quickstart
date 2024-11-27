@@ -16,9 +16,8 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
 
         builder
-            .UseStudioMobile()
-            .UseMauiCompatibility()
-            .UseSharedMauiApp();
+            .UseSharedMauiApp()
+            .UseStudioMobile();
 
         var result =  builder.Build();
 
