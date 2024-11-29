@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://geocortex.com/layout/v1 ../../ViewerSpec/layout/layout-mobile.xsd"
     orientations="portrait,landscape">
-  <gxm:taskbar id="taskbar" orientation="vertical">
+  <gxm:taskbar id="taskbar" orientation="horizontal">
 
     <!-- Taskbar main content -->
     <map id="page1-map1" config="map1" slot="main">
