@@ -1,3 +1,5 @@
+using VertiGIS.Mobile.Platform;
+
 namespace App1.UWP;
 
 public static class MauiProgram
