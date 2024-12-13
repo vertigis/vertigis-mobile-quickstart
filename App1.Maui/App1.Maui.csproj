@@ -27,6 +27,10 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+	  <ProvisioningType>manual</ProvisioningType>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -45,10 +49,22 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup Condition="$(TargetFramework.Contains('windows'))">
+		<MauiAsset Include="Platforms\Windows\Assets\**">
+			<LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiAsset>
+		<None Remove="Assets\**" />
+	</ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Esri.ArcGISRuntime" Version="200.5.0" />
+		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0-main.20" />
+	</ItemGroup>
 </Project>
