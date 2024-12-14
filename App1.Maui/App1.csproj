@@ -29,6 +29,8 @@
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
 	  <ProvisioningType>manual</ProvisioningType>
+	  <CodesignKey>Apple Development: Created via API (O17P7NVJQPH6)</CodesignKey>
+	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
 	</PropertyGroup>
 
 	<ItemGroup>

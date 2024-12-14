@@ -1,7 +1,7 @@
 ﻿using VertiGIS.Mobile;
 using VertiGIS.Mobile.Infrastructure.Configuration;
 
-namespace App1.Maui
+namespace App1
 {
     public partial class App : Application
     {

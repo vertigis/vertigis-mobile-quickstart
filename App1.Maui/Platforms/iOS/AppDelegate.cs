@@ -6,7 +6,7 @@ using VertiGIS.Mobile.Platforms;
 using VertiGIS.Mobile.Toolkit.Logging;
 using VertiGIS.Mobile.Toolkit.Utilities;
 
-namespace App1.Maui;
+namespace App1;
 
 // TODO: Platform specific bootstrapping code should be migrated from AppDelegate.cs.original to AppDelegate.cs or MauiProgram.cs.
 // See iOS App Lifecycle: https://learn.microsoft.com/dotnet/maui/fundamentals/app-lifecycle#ios

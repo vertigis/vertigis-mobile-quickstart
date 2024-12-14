@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using VertiGIS.Mobile.Platform;
 
-namespace App1.Maui
+namespace App1
 {
     public static class MauiProgram
     {

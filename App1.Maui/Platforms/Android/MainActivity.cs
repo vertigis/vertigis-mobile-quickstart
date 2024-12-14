@@ -5,7 +5,7 @@ using Java.Lang;
 using VertiGIS.Mobile.Platforms;
 using static Java.Lang.Thread;
 
-namespace App1.Maui;
+namespace App1;
 
 // See Android App Lifecycle: https://learn.microsoft.com/dotnet/maui/fundamentals/app-lifecycle#android
 // See MainActivity: https://learn.microsoft.com/dotnet/maui/android/manifest#activity-name
@@ -22,7 +22,7 @@ public class MainActivity : VertiGISMobileActivity, IUncaughtExceptionHandler
         HandleExceptions();
 
         // The app was launched with the splash screen theme, so change it to the main theme now
-        base.SetTheme(Resource.Style.MainTheme);
+        base.SetTheme(Maui.Resource.Style.MainTheme);
 
         base.OnCreate(bundle);
 
