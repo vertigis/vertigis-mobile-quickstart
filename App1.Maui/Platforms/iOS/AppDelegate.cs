@@ -33,8 +33,13 @@ public class AppDelegate : VertiGISAppDelegate
 
         var returnValue = base.FinishedLaunching(app, options);
 
-        void OnLoadHandler(object sender, EventArgs args)
+        void OnLoadHandler(object? sender, EventArgs args)
         {
+            if (loadTimer == null)
+            {
+                return;
+            }
+
             Logger.Info($"App Loaded in {loadTimer.Elapsed.ToLogFormat()}.");
             _hasLoaded = true;
             loadTimer.Stop();

@@ -51,7 +51,7 @@ namespace App1
             };
             stack.Children.Add(label);
 
-            void ShowStatus(object sender, LoadingEventArgs e)
+            void ShowStatus(object? sender, LoadingEventArgs e)
             {
                 if (GlobalConfiguration.Instance.StartupLoadStatus)
                 {
