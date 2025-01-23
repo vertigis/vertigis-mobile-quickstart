@@ -22,7 +22,7 @@ public class MainActivity : VertiGISMobileActivity, IUncaughtExceptionHandler
         HandleExceptions();
 
         // The app was launched with the splash screen theme, so change it to the main theme now
-        base.SetTheme(Maui.Resource.Style.MainTheme);
+        base.SetTheme(Microsoft.Maui.Resource.Style.MainTheme);
 
         base.OnCreate(bundle);
 
