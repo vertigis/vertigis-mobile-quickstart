@@ -12,6 +12,7 @@
     <Copyright>Copyright ©  2014</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
+	<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <ConsolePause>false</ConsolePause>
@@ -23,12 +24,12 @@
     <CodesignExtraArgs />
     <CodesignResourceRules />
     <CodesignEntitlements />
-    <RuntimeIdentifiers>iossimulator-x64</RuntimeIdentifiers>
+    <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <MtouchLink>None</MtouchLink>
     <ConsolePause>false</ConsolePause>
-    <RuntimeIdentifiers>iossimulator-x64</RuntimeIdentifiers>
+    <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <ConsolePause>false</ConsolePause>
@@ -42,14 +43,14 @@
     <CodesignResourceRules />
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
-    <RuntimeIdentifiers>ios-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
     <UseNativeHttpHandler>False</UseNativeHttpHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <RuntimeIdentifiers>ios-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <ConsolePause>False</ConsolePause>
@@ -57,14 +58,14 @@
     <CodesignProvision>Automatic:AdHoc</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <RuntimeIdentifiers>ios-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <ConsolePause>False</ConsolePause>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <RuntimeIdentifiers>ios-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
