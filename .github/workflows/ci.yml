@@ -33,11 +33,6 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Install Xamarin.iOS
-              run: |
-                dotnet tool install --global boots
-                boots https://download.visualstudio.microsoft.com/download/pr/de7f727f-243c-4429-8773-eebd735eb1bb/da4a65f27ace7f805914ef63661e0efd/xamarin.ios-16.4.0.18.pkg
-
             # The following two workaround steps can be removed when the following github issue is resolved: https://github.com/actions/virtual-environments/issues/5768
             - name: Restore Workaround Remove
               run: rm -rf ~/.config/NuGet/NuGet.Config
@@ -46,6 +41,9 @@ jobs:
             - name: Restore Workaround List
               run: dotnet nuget list source
               shell: bash
+
+            - name: Install .NET MAUI Workload
+              run: dotnet workload install maui
 
             #- name: Restore NuGet packages
             #  run: msbuild -t:restore
