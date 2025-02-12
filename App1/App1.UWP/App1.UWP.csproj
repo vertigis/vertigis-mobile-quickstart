@@ -16,7 +16,6 @@
 		<Platforms>x86;x64;arm64</Platforms>
 		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
 		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
-		<PublishProfile>win10-$(Platform).pubxml</PublishProfile>
 		<TargetFrameworks>net8.0-windows10.0.19041.0</TargetFrameworks>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
