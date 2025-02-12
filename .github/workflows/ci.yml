@@ -37,7 +37,7 @@ jobs:
               run: dotnet workload install maui
 
             - name: Build
-              run: dotnet publish -f net8.0-ios
+              run: dotnet publish -f net8.0-ios /p:EnableCodeSigning=false
               working-directory: App1/App1.iOS
     Windows:
         runs-on: windows-latest
