@@ -72,6 +72,12 @@
   <PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
     <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="PrivacyInfo.xcprivacy" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="PrivacyInfo.xcprivacy" />
+  </ItemGroup>
 	<ItemGroup>
 		<MauiAsset Include="..\App1\layout-large.xml">
 			<Link>layout-large.xml</Link>
