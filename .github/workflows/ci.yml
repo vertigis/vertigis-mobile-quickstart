@@ -47,9 +47,9 @@ jobs:
               run: dotnet nuget list source
               shell: bash
 
-            - name: Restore NuGet packages
-              run: msbuild -t:restore
-              working-directory: App1/App1.iOS
+            #- name: Restore NuGet packages
+            #  run: msbuild -t:restore
+            #  working-directory: App1/App1.iOS
 
             - name: msbuild
               # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
