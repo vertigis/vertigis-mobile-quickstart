@@ -38,7 +38,7 @@ jobs:
 
             - name: Build
               run: dotnet publish -f net8.0-ios
-              working-directory: VSM.Samples/VSM.Samples.iOS
+              working-directory: App1/App1.iOS
     Windows:
         runs-on: windows-latest
         steps:
@@ -54,4 +54,4 @@ jobs:
 
             - name: Build
               run: dotnet publish -f net8.0-windows10.0.19041.0
-              working-directory: VSM.Samples/VSM.Samples.UWP
+              working-directory: App1/App1.UWP
