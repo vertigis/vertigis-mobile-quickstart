@@ -50,7 +50,10 @@ jobs:
             - name: "Update windows SDK"
               uses: fbactions/setup-winsdk@v1
               with:
-                winsdk-build-version: 18362
+                winsdk-build-version: 19041
+
+            - name: Install .NET MAUI Workload
+              run: dotnet workload install maui
 
             - name: Build
               run: dotnet publish -f net8.0-windows10.0.19041.0
