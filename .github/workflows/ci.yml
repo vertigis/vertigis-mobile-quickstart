@@ -33,6 +33,12 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
+            # Fixes error when using newer NuGet packages that require a minimum version of Xcode
+            - name: Use Latest Xcode
+              uses: maxim-lobanov/setup-xamarin@v1
+              with:
+                  xcode-version: latest
+
             - name: Install .NET MAUI Workload
               run: dotnet workload install maui
 
