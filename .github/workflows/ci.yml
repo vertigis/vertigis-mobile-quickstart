@@ -58,9 +58,6 @@ jobs:
               with:
                 winsdk-build-version: 18362
 
-            - name: Install .NET MAUI Workload
-              run: dotnet workload install maui
-
             - name: Build
               run: dotnet publish -f net8.0-windows10.0.19041.0
               working-directory: App1/App1.UWP
