@@ -1,8 +1,5 @@
 ﻿using VertiGIS.Mobile;
 using VertiGIS.Mobile.Infrastructure.Configuration;
-using VertiGIS.Mobile.Toolkit.Views;
-using System;
-using Xamarin.Forms;
 
 namespace App1
 {
@@ -11,7 +8,7 @@ namespace App1
         public App() : base()
         {
             AppManager.Initialize(this);
-            
+
             // Uncomment the following to add the styles from this page to the application.
             // Overrides default styles provided by VertiGIS.Mobile.
             //var res = new Styles().Resources;
@@ -50,7 +47,7 @@ namespace App1
         {
             // OnResume will get called when background processing begins.
             // UWP activated events are raised in UWP App.xaml.cs.
-            if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
+            if (DeviceInfo.Platform != DevicePlatform.WinUI)
             {
                 AppManager.Instance.OnActivated();
             }
@@ -61,7 +58,7 @@ namespace App1
         private View GetContent()
         {
             // Stack
-            var stack = new StackLayout
+            var stack = new VerticalStackLayout
             {
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
@@ -69,7 +66,7 @@ namespace App1
             };
 
             // Spinner
-            var spinner = new EnhancedActivityIndicator()
+            var spinner = new ActivityIndicator()
             {
                 IsRunning = true
             };
@@ -80,7 +77,7 @@ namespace App1
             // Label
             var label = new Label()
             {
-                TextColor = Color.Black
+                TextColor = Colors.Black
             };
             stack.Children.Add(label);
 

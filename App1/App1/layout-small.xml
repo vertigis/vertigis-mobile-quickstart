@@ -4,7 +4,7 @@
     xmlns:gxm="https://geocortex.com/layout/mobile/v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://geocortex.com/layout/v1 ../../ViewerSpec/layout/layout-mobile.xsd"
-    orientations="portrait">
+    orientations="portrait,landscape">
   <gxm:taskbar id="taskbar" orientation="horizontal">
 
     <!-- Taskbar main content -->
@@ -51,16 +51,16 @@
       <gxm:add-related-feature />
     </panel>
 
-    <!-- Taskbar / layers -->
+     <!--Taskbar / layers--> 
     <layer-list id="layers"/>
 
-    <!-- Taskbar / map areas -->
+     <!--Taskbar / map areas--> 
     <panel>
       <gxm:offline-areas config="offline"/>
       <gxm:create-offline-area id="create-map-area" config="offline" />
     </panel>
 
-    <!-- Taskbar / add feature -->
+     <!--Taskbar / add feature--> 
     <panel>
       <gxm:add-feature-select-layer config="edit"/>
       <gxm:add-feature/>

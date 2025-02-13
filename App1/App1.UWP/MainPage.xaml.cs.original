@@ -1,4 +1,5 @@
-﻿namespace App1.UWP
+//TODO: Please move your logic out of 'MainPage.xaml.original' and 'MainPage.xaml.cs.original'.
+namespace App1.UWP
 {
     /// <summary>
     /// The main entry point to the app.
