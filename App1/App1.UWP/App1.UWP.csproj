@@ -95,10 +95,10 @@
 		<PackageReference Include="Jint" Version="4.1.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240607001" />
-		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.2.0" />
-		<PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.8" />
-	  <PackageReference Include="VertiGIS.Mobile" Version="5.34.0.284" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.241114003" />
+		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.3.0" />
+		<PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.0" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0.284" />
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="Assets\NLog.config">
