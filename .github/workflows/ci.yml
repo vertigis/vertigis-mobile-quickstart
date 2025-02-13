@@ -22,7 +22,7 @@ jobs:
 
             - name: Restore NuGet packages
               run: msbuild -t:restore
-              working-directory: App1/App1.Android
+              working-directory: App1
 
             - name: msbuild
               # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
