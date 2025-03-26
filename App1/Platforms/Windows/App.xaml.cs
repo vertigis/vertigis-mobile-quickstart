@@ -26,7 +26,7 @@ namespace App1.WinUI
             base.OnLaunched(launchArgs);
             AppHandlers.HandleOnLaunched();
 
-            this.Resources["CustomTitle"] = Windows.ApplicationModel.AppInfo.Current.DisplayInfo.DisplayName; ;
+            this.Resources["CustomTitle"] = Windows.ApplicationModel.AppInfo.Current.DisplayInfo.DisplayName;
         }
     }
 }
