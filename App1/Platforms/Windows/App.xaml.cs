@@ -1,4 +1,4 @@
-﻿using Microsoft.UI.Xaml;
+﻿using VertiGIS.Mobile.Platforms.Platform;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -20,6 +20,13 @@ namespace App1.WinUI
         }
 
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
-    }
 
+        protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs launchArgs)
+        {
+            base.OnLaunched(launchArgs);
+            AppHandlers.HandleOnLaunched();
+
+            this.Resources["CustomTitle"] = Windows.ApplicationModel.AppInfo.Current.DisplayInfo.DisplayName; ;
+        }
+    }
 }

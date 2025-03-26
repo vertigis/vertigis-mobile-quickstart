@@ -8,6 +8,24 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../../VertiGIS.Mobile/Platforms/Windows/VertiGISResources.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <x:String x:Key="CustomTitle">Studio Mobile</x:String>
+            <DataTemplate x:Key="MauiAppTitleBarTemplate">
+                <Grid>
+                    <Border
+                        Canvas.ZIndex="1"
+                        VerticalAlignment="Stretch"
+                        Background="{ThemeResource TitleBarBackground}"
+                        Margin="0,0,0,0">
+                        <TextBlock Padding="10,0"
+                            Foreground="{ThemeResource TitleBarForeground}"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Text="{ThemeResource CustomTitle}"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+
             <Style x:Key="DefaultButtonStyle" TargetType="Button">
                 <Setter Property="Background" Value="Blue"/>
             </Style>

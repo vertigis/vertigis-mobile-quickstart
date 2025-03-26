@@ -3,7 +3,8 @@
 	<PropertyGroup>
 		<TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
-
+		<!--Explicit reference to WindowsSdkPackageVersion to workaround MSAL not displaying on certain versions of WindowsAppSdk -->
+		<WindowsSdkPackageVersion>10.0.22621.38</WindowsSdkPackageVersion>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>App1</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -23,8 +24,8 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.19041.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.19041.0</TargetPlatformMinVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
@@ -55,9 +56,18 @@
 		<MauiAsset Include="Platforms\Windows\Assets\**">
 			<LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
 		</MauiAsset>
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.250108002" />
 		<None Remove="Assets\**" />
 	</ItemGroup>
+	
+	<ItemGroup Condition="$(TargetFramework.Contains('-android'))">
+		<MauiAsset Include="Platforms\Android\Assets\**" />
+	</ItemGroup>
 
+	<ItemGroup Condition="$(TargetFramework.Contains('-ios'))">
+		<MauiAsset Include="Platforms\iOS\Resources\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+		
 	<ItemGroup>
 		<PackageReference Include="Jint" Version="4.1.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
@@ -68,6 +78,7 @@
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime" Version="200.5.0" />
 		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0.284" />
+		<!--PLACEHOLDER: Swap with 5.35 release before PR merges -->
+		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0.284" /> 
 	</ItemGroup>
 </Project>
