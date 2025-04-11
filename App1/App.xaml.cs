@@ -71,6 +71,13 @@ namespace App1
         protected override async void OnStart()
         {
             await AppManager.Instance.InitializeAsync();
+
+            if (GlobalConfiguration.Instance.GenericApp)
+            {
+                await AppManager.Instance.Bootstrapper.DisplayAppSelectorAsync(AppManager.ActivationOptions);
+                return;
+            }
+
             var appPage = await AppManager.Instance.Bootstrapper.LoadAppAsync(new Uri("resource://app.json"));
             await AppManager.Instance.Bootstrapper.DisplayAppAsync(appPage.Page);
         }
