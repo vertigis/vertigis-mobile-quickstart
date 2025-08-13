@@ -3,8 +3,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
-		<!--Explicit reference to WindowsSdkPackageVersion to workaround MSAL not displaying on certain versions of WindowsAppSdk -->
-		<WindowsSdkPackageVersion>10.0.22621.38</WindowsSdkPackageVersion>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>App1</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -56,7 +54,7 @@
 		<MauiAsset Include="Platforms\Windows\Assets\**">
 			<LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
 		</MauiAsset>
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.250108002" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250606001" />
 		<None Remove="Assets\**" />
 	</ItemGroup>
 	
@@ -77,6 +75,6 @@
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime" Version="200.5.0" />
 		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.36.0.191" /> 
+		<PackageReference Include="VertiGIS.Mobile" Version="5.37.0.232" /> 
 	</ItemGroup>
 </Project>
