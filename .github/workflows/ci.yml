@@ -29,7 +29,7 @@ jobs:
               run: msbuild
               working-directory: App1
     iOS:
-        runs-on: macos-15
+        runs-on: macos-16
         steps:
             - uses: actions/checkout@v2
 
