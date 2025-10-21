@@ -28,6 +28,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net9.0-ios'">
+	  <SkipStaticLibraryValidation>warn</SkipStaticLibraryValidation>
 	  <ProvisioningType>manual</ProvisioningType>
 	  <CodesignKey>Apple Development: Created via API (O17P7NVJQPH6)</CodesignKey>
 	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
@@ -76,6 +77,6 @@
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime" Version="200.7.0" />
 		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.7.0" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.38.1-PullRequest34930.290" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.38.1.292" />
 	</ItemGroup>
 </Project>
