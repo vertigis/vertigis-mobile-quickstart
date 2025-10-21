@@ -53,7 +53,7 @@ jobs:
               run: dotnet workload install maui
 
             - name: Build
-              run: dotnet publish -f net9.0-ios /p:EnableCodeSigning=false
+              run: dotnet publish -f net9.0-ios18.0 /p:EnableCodeSigning=false
               working-directory: App1
     Windows:
         runs-on: windows-latest
@@ -64,7 +64,7 @@ jobs:
               uses: actions/setup-dotnet@v5
               with:
                 dotnet-version: '9.0.302'
-                
+
             - name: Setup msbuild
               uses: microsoft/setup-msbuild@v1
               
