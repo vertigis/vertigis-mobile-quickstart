@@ -76,6 +76,6 @@
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime" Version="200.7.0" />
 		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.7.0" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.38.0.237" /> 
+		<PackageReference Include="VertiGIS.Mobile" Version="5.38.1-PullRequest34930.290" />
 	</ItemGroup>
 </Project>
