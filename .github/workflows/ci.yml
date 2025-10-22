@@ -12,11 +12,6 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Set .NET SDK version
-              uses: actions/setup-dotnet@v5
-              with:
-                dotnet-version: '9.0.302'
-
             - name: Setup msbuild
               uses: microsoft/setup-msbuild@v1
 
@@ -38,16 +33,11 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Set .NET SDK version
-              uses: actions/setup-dotnet@v5
-              with:
-                dotnet-version: '9.0.302'
-
             # Fixes error when using newer NuGet packages that require a minimum version of Xcode
             - name: Use Latest Xcode
               uses: maxim-lobanov/setup-xamarin@v1
               with:
-                  xcode-version: '16.x'
+                  xcode-version: '26.0.1'
 
             - name: Install .NET MAUI Workload
               run: dotnet workload install maui
@@ -59,11 +49,6 @@ jobs:
         runs-on: windows-latest
         steps:
             - uses: actions/checkout@v2
-
-            - name: Set .NET SDK version
-              uses: actions/setup-dotnet@v5
-              with:
-                dotnet-version: '9.0.302'
 
             - name: Setup msbuild
               uses: microsoft/setup-msbuild@v1
