@@ -19,7 +19,7 @@ jobs:
                   
             - uses: actions/setup-dotnet@v5
               with:
-                dotnet-version: '9.0.311'
+                dotnet-version: '9.0.312'
 
             - name: Confirm dotnet being used
               run: |
@@ -28,7 +28,7 @@ jobs:
                 dotnet --info
 
             - name: Install .NET MAUI Workload
-              run: dotnet workload install maui@9.0.311
+              run: dotnet workload install maui@9.0.312
 
             - name: Build
               run: dotnet publish -f net9.0-android
@@ -40,7 +40,7 @@ jobs:
                   
             - uses: actions/setup-dotnet@v5
               with:
-                dotnet-version: '9.0.311'
+                dotnet-version: '9.0.312'
 
             # Fixes error when using newer NuGet packages that require a minimum version of Xcode
             - name: Use Latest Xcode
@@ -49,7 +49,7 @@ jobs:
                   xcode-version: '26.3'
 
             - name: Install .NET MAUI Workload
-              run: dotnet workload install maui@9.0.311
+              run: dotnet workload install maui@9.0.312
 
             - name: Build
               run: dotnet publish -f net9.0-ios /p:EnableCodeSigning=false
@@ -61,7 +61,7 @@ jobs:
                   
             - uses: actions/setup-dotnet@v5
               with:
-                dotnet-version: '9.0.311'
+                dotnet-version: '9.0.312'
 
             - name: "Update windows SDK"
               uses: fbactions/setup-winsdk@v1
@@ -69,7 +69,7 @@ jobs:
                 winsdk-build-version: 19041
 
             - name: Install .NET MAUI Workload
-              run: dotnet workload install maui@9.0.311
+              run: dotnet workload install maui@9.0.312
 
             - name: Build
               run: dotnet publish -f net9.0-windows10.0.19041.0
