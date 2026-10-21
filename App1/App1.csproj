@@ -29,10 +29,6 @@
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net9.0-ios'">
 	  <SkipStaticLibraryValidation>warn</SkipStaticLibraryValidation>
-	  <ValidateXcodeVersion>false</ValidateXcodeVersion>
-	  <ProvisioningType>manual</ProvisioningType>
-	  <CodesignKey>Apple Development: Created via API (251HB49CF0XZ)</CodesignKey>
-	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
 	</PropertyGroup>
 
 	<ItemGroup>
