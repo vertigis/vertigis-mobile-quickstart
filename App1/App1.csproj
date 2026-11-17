@@ -71,8 +71,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Esri.ArcGISRuntime" Version="200.8.1" />
-		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.8.1" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.44.0.201" />
+		<PackageReference Include="Esri.ArcGISRuntime" Version="300.0.0" />
+		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="300.0.0" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.45.0.172" />
 	</ItemGroup>
 </Project>
